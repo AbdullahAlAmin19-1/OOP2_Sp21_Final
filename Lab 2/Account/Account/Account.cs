@@ -30,13 +30,14 @@ namespace Account
             get { return balance; }
         }
 
-        public Account() { }
+        public Account() { listOfTransaction = new Transaction[100]; }
 
         public Account(string accName, string accid, int balance)
         {
             this.accName = accName;
             this.accid = accid;
             this.balance = balance;
+            listOfTransaction = new Transaction[100];
         }
         public void Deposit(int amount)
         {
@@ -53,11 +54,15 @@ namespace Account
             {
             balance = balance - amount;
             Console.WriteLine("Money Withdraw Completed.");
+            Console.WriteLine();
             Transaction t = new Transaction(this, this, amount, "Self Withdraw");
             this.addtransaction(t);
             }
             else
-                Console.WriteLine("Invalid Amount.");
+            {
+                Console.WriteLine("Insufficien Balance");
+                Console.WriteLine();
+            } 
         }
         public void Transfer(int amount, Account acc)
         {
@@ -66,12 +71,16 @@ namespace Account
             balance = balance - amount;
             acc.Balance = acc.Balance + amount;
             Console.WriteLine("Balance Transfered.");
+            Console.WriteLine();
             Transaction t = new Transaction(this, acc, amount, "Money Transfer");
             this.addtransaction(t);
             acc.addtransaction(t);
             }
             else
-                Console.WriteLine("Invalid Amount.");
+            {
+                Console.WriteLine("Insufficien Balance");
+                Console.WriteLine();
+            }   
         }
 
         public int TotalNumberOfTransaction { get; set; }
@@ -86,7 +95,7 @@ namespace Account
         }
         public void showAllTransactions()
         {
-            for (int i = 0; i < (TotalNumberOfTransaction + 1); i++ )
+            for (int i = 0; i < TotalNumberOfTransaction; ++i)
             {
                 listOfTransaction[i].showInfo();
             }

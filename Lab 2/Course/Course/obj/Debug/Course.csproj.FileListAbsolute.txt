@@ -1,1 +1,6 @@
 D:\Versity\7th Semester\OBJECT ORIENTED PROGRAMMING 2 [M]\Final Code\Lab 2\Course\Course\bin\Debug\Course.exe.config
+D:\Versity\7th Semester\OBJECT ORIENTED PROGRAMMING 2 [M]\Final Code\Lab 2\Course\Course\obj\Debug\Course.csprojResolveAssemblyReference.cache
+D:\Versity\7th Semester\OBJECT ORIENTED PROGRAMMING 2 [M]\Final Code\Lab 2\Course\Course\bin\Debug\Course.exe
+D:\Versity\7th Semester\OBJECT ORIENTED PROGRAMMING 2 [M]\Final Code\Lab 2\Course\Course\bin\Debug\Course.pdb
+D:\Versity\7th Semester\OBJECT ORIENTED PROGRAMMING 2 [M]\Final Code\Lab 2\Course\Course\obj\Debug\Course.exe
+D:\Versity\7th Semester\OBJECT ORIENTED PROGRAMMING 2 [M]\Final Code\Lab 2\Course\Course\obj\Debug\Course.pdb
