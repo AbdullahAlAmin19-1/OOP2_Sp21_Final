@@ -54,15 +54,8 @@ namespace Course
 
         public void RemoveCourse(Course c)
         {
-            if (c == courses[CourseCount - 1])
-            {
-                courses[CourseCount--] = null;
-                c.RemoveStudent(this);
-                return;
-            }
-
             bool found = true;
-            for (int i = 0; i < CourseCount - 1; ++i)
+            for (int i = 0; i < CourseCount; ++i)
             {
                 if (c == courses[i] && found)
                 {
