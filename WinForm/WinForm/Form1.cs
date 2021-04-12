@@ -56,5 +56,42 @@ namespace WinForm
         {
 
         }
+
+        private void Submit(object sender, EventArgs e)
+        {
+            MessageBox.Show("Information Submited");
+            string fName = txtFName.Text;
+            string lName = txtLName.Text;
+            string day = cbDay.SelectedItem.ToString();
+            string month = cbMonth.SelectedItem.ToString();
+            string year = cbYear.SelectedItem.ToString();
+            var gender = gbGender.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked).Text;
+            string email = txtEmail.Text;
+
+            rtOutput.Text = string.Format("First Name: {0} \nLast Name: {1} \nDate of Birth: {2}/{3}/{4} \nGender: {5} \nEmail: {6}",fName,lName,day,month,year,gender,email);
+            //rtOutput.Text = string.Format("Email: "+email);
+            //rtOutput.Text = fName;
+            //rtOutput.Text = lName;
+            //rtOutput.Text = day;
+            //rtOutput.Text = month;
+            //rtOutput.Text = year;
+           //rtOutput.Text = gender;
+            //rtOutput.Text = email;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbDay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtOutput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

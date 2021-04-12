@@ -33,16 +33,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.Male = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.txtFName = new System.Windows.Forms.TextBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
+            this.cbDay = new System.Windows.Forms.ComboBox();
+            this.cbMonth = new System.Windows.Forms.ComboBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbOthers = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -72,6 +72,9 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.rtOutput = new System.Windows.Forms.RichTextBox();
+            this.gbGender = new System.Windows.Forms.GroupBox();
+            this.gbGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,96 +126,97 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Gender:";
             // 
-            // textBox1
+            // txtFName
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 22);
-            this.textBox1.TabIndex = 5;
+            this.txtFName.Location = new System.Drawing.Point(146, 84);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(283, 22);
+            this.txtFName.TabIndex = 5;
             // 
-            // textBox2
+            // txtLName
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(282, 22);
-            this.textBox2.TabIndex = 6;
+            this.txtLName.Location = new System.Drawing.Point(146, 122);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(282, 22);
+            this.txtLName.TabIndex = 6;
             // 
-            // comboBox1
+            // cbDay
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbDay.FormattingEnabled = true;
+            this.cbDay.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(222, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 24);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "Day";
+            this.cbDay.Location = new System.Drawing.Point(251, 164);
+            this.cbDay.Name = "cbDay";
+            this.cbDay.Size = new System.Drawing.Size(59, 24);
+            this.cbDay.TabIndex = 7;
+            this.cbDay.Text = "Day";
+            this.cbDay.SelectedIndexChanged += new System.EventHandler(this.cbDay_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cbMonth
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Items.AddRange(new object[] {
             "January",
             "February",
             "March"});
-            this.comboBox2.Location = new System.Drawing.Point(147, 164);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(63, 24);
-            this.comboBox2.TabIndex = 8;
-            this.comboBox2.Text = "Month";
+            this.cbMonth.Location = new System.Drawing.Point(147, 164);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(88, 24);
+            this.cbMonth.TabIndex = 8;
+            this.cbMonth.Text = "Month";
             // 
-            // comboBox3
+            // cbYear
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Items.AddRange(new object[] {
             "2000",
             "1999",
             "1998",
             "1997"});
-            this.comboBox3.Location = new System.Drawing.Point(293, 164);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(63, 24);
-            this.comboBox3.TabIndex = 9;
-            this.comboBox3.Text = "Year";
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cbYear.Location = new System.Drawing.Point(316, 164);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(68, 24);
+            this.cbYear.TabIndex = 9;
+            this.cbYear.Text = "Year";
+            this.cbYear.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // Male
+            // rbMale
             // 
-            this.Male.AutoSize = true;
-            this.Male.Location = new System.Drawing.Point(147, 211);
-            this.Male.Name = "Male";
-            this.Male.Size = new System.Drawing.Size(59, 21);
-            this.Male.TabIndex = 10;
-            this.Male.TabStop = true;
-            this.Male.Text = "Male";
-            this.Male.UseVisualStyleBackColor = true;
-            this.Male.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbMale.AutoSize = true;
+            this.rbMale.Location = new System.Drawing.Point(12, 21);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(59, 21);
+            this.rbMale.TabIndex = 10;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton1
+            // rbFemale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(212, 211);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(75, 21);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Female";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(77, 21);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(75, 21);
+            this.rbFemale.TabIndex = 11;
+            this.rbFemale.TabStop = true;
+            this.rbFemale.Text = "Female";
+            this.rbFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbOthers
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(293, 211);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 21);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Others";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbOthers.AutoSize = true;
+            this.rbOthers.Location = new System.Drawing.Point(158, 21);
+            this.rbOthers.Name = "rbOthers";
+            this.rbOthers.Size = new System.Drawing.Size(72, 21);
+            this.rbOthers.TabIndex = 12;
+            this.rbOthers.TabStop = true;
+            this.rbOthers.Text = "Others";
+            this.rbOthers.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -225,13 +229,13 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Account Information";
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(146, 310);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(282, 22);
-            this.textBox3.TabIndex = 15;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtEmail.Location = new System.Drawing.Point(146, 310);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(282, 22);
+            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label7
             // 
@@ -276,6 +280,7 @@
             this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(281, 22);
             this.textBox5.TabIndex = 20;
+            this.textBox5.UseSystemPasswordChar = true;
             // 
             // label10
             // 
@@ -499,13 +504,39 @@
             this.button1.TabIndex = 44;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Submit);
+            // 
+            // rtOutput
+            // 
+            this.rtOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtOutput.Location = new System.Drawing.Point(497, 34);
+            this.rtOutput.Name = "rtOutput";
+            this.rtOutput.Size = new System.Drawing.Size(543, 487);
+            this.rtOutput.TabIndex = 45;
+            this.rtOutput.Text = "";
+            this.rtOutput.TextChanged += new System.EventHandler(this.rtOutput_TextChanged);
+            // 
+            // gbGender
+            // 
+            this.gbGender.Controls.Add(this.rbMale);
+            this.gbGender.Controls.Add(this.rbFemale);
+            this.gbGender.Controls.Add(this.rbOthers);
+            this.gbGender.Location = new System.Drawing.Point(146, 194);
+            this.gbGender.Name = "gbGender";
+            this.gbGender.Size = new System.Drawing.Size(238, 58);
+            this.gbGender.TabIndex = 46;
+            this.gbGender.TabStop = false;
+            this.gbGender.Text = "Gender";
+            this.gbGender.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(592, 959);
+            this.ClientSize = new System.Drawing.Size(1071, 959);
+            this.Controls.Add(this.gbGender);
+            this.Controls.Add(this.rtOutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.comboBox6);
@@ -534,17 +565,14 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.Male);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbYear);
+            this.Controls.Add(this.cbMonth);
+            this.Controls.Add(this.cbDay);
+            this.Controls.Add(this.txtLName);
+            this.Controls.Add(this.txtFName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -552,6 +580,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.gbGender.ResumeLayout(false);
+            this.gbGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,16 +594,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.RadioButton Male;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox txtFName;
+        private System.Windows.Forms.TextBox txtLName;
+        private System.Windows.Forms.ComboBox cbDay;
+        private System.Windows.Forms.ComboBox cbMonth;
+        private System.Windows.Forms.ComboBox cbYear;
+        private System.Windows.Forms.RadioButton rbMale;
+        private System.Windows.Forms.RadioButton rbFemale;
+        private System.Windows.Forms.RadioButton rbOthers;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
@@ -603,6 +633,8 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox rtOutput;
+        private System.Windows.Forms.GroupBox gbGender;
     }
 }
 
