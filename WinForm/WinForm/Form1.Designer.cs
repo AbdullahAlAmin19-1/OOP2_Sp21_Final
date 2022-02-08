@@ -521,7 +521,7 @@
             this.gbGender.Controls.Add(this.rbMale);
             this.gbGender.Controls.Add(this.rbFemale);
             this.gbGender.Controls.Add(this.rbOthers);
-            this.gbGender.Location = new System.Drawing.Point(146, 194);
+            this.gbGender.Location = new System.Drawing.Point(218, 211);
             this.gbGender.Name = "gbGender";
             this.gbGender.Size = new System.Drawing.Size(238, 58);
             this.gbGender.TabIndex = 46;

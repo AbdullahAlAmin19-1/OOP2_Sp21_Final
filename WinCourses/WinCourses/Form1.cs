@@ -182,5 +182,15 @@ namespace WinCourses
             tbCourseName.Text = "";
             tbCourseCode.Text = "";
         }
+
+        private void tbCourseName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCourseID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

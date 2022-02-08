@@ -53,6 +53,7 @@
             this.tbCourseName.Name = "tbCourseName";
             this.tbCourseName.Size = new System.Drawing.Size(137, 22);
             this.tbCourseName.TabIndex = 0;
+            this.tbCourseName.TextChanged += new System.EventHandler(this.tbCourseName_TextChanged);
             // 
             // label1
             // 
@@ -114,6 +115,7 @@
             this.tbCourseID.Name = "tbCourseID";
             this.tbCourseID.Size = new System.Drawing.Size(137, 22);
             this.tbCourseID.TabIndex = 6;
+            this.tbCourseID.TextChanged += new System.EventHandler(this.tbCourseID_TextChanged);
             // 
             // btSearch
             // 
@@ -127,6 +129,7 @@
             // 
             // tbCourseNameUpdate
             // 
+            this.tbCourseNameUpdate.Enabled = false;
             this.tbCourseNameUpdate.Location = new System.Drawing.Point(146, 282);
             this.tbCourseNameUpdate.Name = "tbCourseNameUpdate";
             this.tbCourseNameUpdate.Size = new System.Drawing.Size(137, 22);
@@ -173,6 +176,7 @@
             this.dtCourses.Location = new System.Drawing.Point(305, 41);
             this.dtCourses.Margin = new System.Windows.Forms.Padding(4);
             this.dtCourses.Name = "dtCourses";
+            this.dtCourses.RowHeadersWidth = 51;
             this.dtCourses.Size = new System.Drawing.Size(480, 112);
             this.dtCourses.TabIndex = 14;
             this.dtCourses.Visible = false;
